@@ -32,7 +32,7 @@ const createShapeElement = () => {
     }, 15000);
 };
 
-setInterval(createShapeElement, 500);
+// setInterval(createShapeElement, 500);
 
 
 let userInput = document.getElementById("date");
