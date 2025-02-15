@@ -1,36 +1,36 @@
-const body = document.body;
-body.style.overflow = 'hidden';    
+// const body = document.body;
+// body.style.overflow = 'hidden';    
 
-const createShapeElement = () => {
-    const shapeElement = document.createElement('div');
-    shapeElement.style.position = 'absolute';
-    shapeElement.style.left = `${Math.random() * window.innerWidth}px`;
-    shapeElement.style.top = `${Math.random() * window.innerHeight}px`;
-    shapeElement.style.fontSize = `${Math.floor(Math.random() * 20) + 30}px`;
-    shapeElement.style.color = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.5)`;
-    shapeElement.style.pointerEvents = 'none'; 
-    shapeElement.style.userSelect = 'none';  
-    shapeElement.style.zIndex = '-1';   
-    shapeElement.innerText = '●'; 
-    body.appendChild(shapeElement);
+// const createShapeElement = () => {
+//     const shapeElement = document.createElement('div');
+//     shapeElement.style.position = 'absolute';
+//     shapeElement.style.left = `${Math.random() * window.innerWidth}px`;
+//     shapeElement.style.top = `${Math.random() * window.innerHeight}px`;
+//     shapeElement.style.fontSize = `${Math.floor(Math.random() * 20) + 30}px`;
+//     shapeElement.style.color = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.5)`;
+//     shapeElement.style.pointerEvents = 'none'; 
+//     shapeElement.style.userSelect = 'none';  
+//     shapeElement.style.zIndex = '-1';   
+//     shapeElement.innerText = '●'; 
+//     body.appendChild(shapeElement);
 
-    let direction = Math.random() > 0.5 ? 1 : -1;
-    const speed = Math.random() * 2 + 1;
+//     let direction = Math.random() > 0.5 ? 1 : -1;
+//     const speed = Math.random() * 2 + 1;
 
-    const moveShape = () => {
-        const rect = shapeElement.getBoundingClientRect();
-        if (rect.top <= 0 || rect.bottom >= window.innerHeight) {
-            direction *= -1;
-        }
-        shapeElement.style.transform = `translateY(${direction * speed}px)`;
-        requestAnimationFrame(moveShape);
-    };
-    moveShape();
+//     const moveShape = () => {
+//         const rect = shapeElement.getBoundingClientRect();
+//         if (rect.top <= 0 || rect.bottom >= window.innerHeight) {
+//             direction *= -1;
+//         }
+//         shapeElement.style.transform = `translateY(${direction * speed}px)`;
+//         requestAnimationFrame(moveShape);
+//     };
+//     moveShape();
 
-    setTimeout(() => {
-        shapeElement.remove();
-    }, 15000);
-};
+//     setTimeout(() => {
+//         shapeElement.remove();
+//     }, 15000);
+// };
 
 // setInterval(createShapeElement, 500);
 
